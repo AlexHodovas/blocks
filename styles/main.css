@@ -1,0 +1,51 @@
+button {
+  outline: none; }
+
+.wrapper {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 48px; }
+  .wrapper__table {
+    border-spacing: 0;
+    border: 1px solid #4aaae7; }
+    .wrapper__table td {
+      width: 48px;
+      height: 48px;
+      background-color: #4aaae7;
+      border: 1px solid white;
+      padding: 0; }
+  .wrapper:hover .wrapper__button--minus {
+    background-color: #b10000; }
+  .wrapper__button {
+    border: none;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    color: white;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+    transition: opacity 1s, -webkit-transform 0.5s;
+    transition: opacity 1s, transform 0.5s;
+    transition: opacity 1s, transform 0.5s, -webkit-transform 0.5s; }
+    .wrapper__button--add {
+      background-color: #f4a400; }
+    .wrapper__button:hover {
+      cursor: pointer;
+      opacity: 0.6; }
+  .wrapper .plus-column {
+    top: 49px;
+    right: -2px; }
+  .wrapper .plus-row {
+    bottom: -2px;
+    left: 49px; }
+  .wrapper .minus-column {
+    top: -2px; }
+  .wrapper .minus-row {
+    left: -2px; }
+  .wrapper .hidden {
+    display: none; }
+
+/*# sourceMappingURL=main.css.map */
