@@ -1,0 +1,78 @@
+$cellSizePX: 48px;
+$buttonSizePX: 48px;
+$buttonSize: 48;
+$spaceBetweenTableAndButtons: -2px;
+$main-color: #4aaae7;
+$background-color-in-add-button: #f4a400;
+$background-color-minus-button: #b10000;
+
+button {
+  outline: none;
+}
+
+.wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: $cellSizePX;
+
+  &__table {
+    border-spacing: 0;
+    border: 1px solid $main-color;
+
+    td {
+      width: $cellSizePX;
+      height: $cellSizePX;
+      background-color: $main-color;
+      border: 1px solid white;
+      padding: 0;
+    }
+  }
+
+  &:hover {
+    .wrapper__button--minus {
+      background-color: $background-color-minus-button;
+    }
+  }
+
+  &__button {
+    border: none;
+    position: absolute;
+    width: $buttonSizePX;
+    height: $buttonSizePX;
+    color: white;
+    transition: opacity 1s, transform 0.5s;
+
+    &--add {
+      background-color: $background-color-in-add-button;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+
+  .plus-column {
+    top: $buttonSize + 1 + px;
+    right: $spaceBetweenTableAndButtons;
+  }
+
+  .plus-row {
+    bottom: $spaceBetweenTableAndButtons;
+    left: $buttonSize + 1 + px;
+  }
+
+  .minus-column {
+    top: $spaceBetweenTableAndButtons;
+  }
+
+  .minus-row {
+    left: $spaceBetweenTableAndButtons;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
